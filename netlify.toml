@@ -2,6 +2,7 @@
   base = "frontend"
   publish = "dist"
   command = "npm run build"
+  functions = "../netlify/functions"
 
 [context.production.environment]
   NODE_VERSION = "20"
