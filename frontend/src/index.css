@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mario-red: #E52521;
+  --color-mario-blue: #049CD8;
+  --color-mario-green: #43B047;
+  --color-mario-yellow: #FBD000;
+  --color-coin-gold: #FFD700;
+  --font-press-start: '"Press Start 2P", system-ui, monospace';
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-zinc-100;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+}
