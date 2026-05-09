@@ -52,7 +52,7 @@ const GameComponent: React.FC<GameComponentProps> = ({ userId, onRestart }) => {
     if (!scoreData) return;
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || '/.netlify/functions/api';
+      const apiUrl = import.meta.env.VITE_API_URL || '/api';
       const response = await fetch(`${apiUrl}/scores`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

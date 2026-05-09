@@ -1,11 +1,15 @@
 [build]
-  base = "frontend"
-  publish = "dist"
-  command = "npm run build"
-  functions = "../netlify/functions"
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/dist"
+  functions = "netlify/functions"
 
 [context.production.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"
